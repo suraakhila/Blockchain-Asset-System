@@ -18,14 +18,11 @@ Before you start, make sure you have the following installed on your computer:
 
 - [**Docker**](https://docs.docker.com/get-docker/) 
   
-- [**Docker Compose**](https://docs.docker.com/compose/install/) 
-  ![Docker Compose](https://docs.docker.com/compose/images/docker-compose-logo.png)
+- [**Docker Compose**](https://docs.docker.com/compose/install/)
   
 - [**Go Programming Language**](https://golang.org/doc/install) 
-  ![Go](https://golang.org/doc/gopher/frontpage.png)
   
 - [**Node.js** (optional for REST API)](https://nodejs.org/en/download/) 
-  ![Node.js](https://nodejs.org/static/images/logos/nodejs-new-logo.png)
 
 ## Setup Hyperledger Fabric Test Network 🛠️
 
