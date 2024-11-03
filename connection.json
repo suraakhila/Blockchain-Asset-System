@@ -1,0 +1,54 @@
+{
+    "name": "fabric-network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Org1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorsement": "300",
+                    "detection": "300",
+                    "eventHub": "300",
+                    "commit": "300"
+                }
+            }
+        }
+    },
+    "channels": {
+        "mychannel": {
+            "peers": {
+                "peer0.org1.example.com": {}
+            }
+        }
+    },
+    "organizations": {
+        "Org1": {
+            "mspid": "Org1MSP",
+            "peers": ["peer0.org1.example.com"],
+            "certificateAuthorities": ["ca.org1.example.com"]
+        }
+    },
+    "peers": {
+        "peer0.org1.example.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "path": "/path/to/tls/ca.crt"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.org1.example.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.org1.example.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca-org1",
+            "tlsCACerts": {
+                "path": "/path/to/tls/ca.crt"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
